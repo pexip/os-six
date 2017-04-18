@@ -6,11 +6,19 @@ XSBC-Pexip-Original-Maintainer: Colin Watson <cjwatson@debian.org>
 XSBC-Pexip-Original-Uploaders: Barry Warsaw <barry@debian.org>,
 Build-Depends: debhelper (>= 9),
                dh-python,
+               pypy,
+               pypy-setuptools,
                python (>= 2.6.6-3~),
                python-all,
                python-py,
                python-pytest,
                python-setuptools,
+               python3 (>= 3.1.2-8~),
+               python3-all,
+               python3-py,
+               python3-pytest,
+               python3-setuptools,
+               python3-wheel,
 Standards-Version: 3.9.6
 X-Python-Version: >= 2.7
 X-Python3-Version: >= 3.4
@@ -33,3 +41,43 @@ Description: Python 2 and 3 compatibility library (Python 2 interface)
  This package provides Six on the Python 2 module path. It is complemented
  by python3-six and pypy-six.
 
+Package: python3-six
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${python3:Depends},
+Description: Python 2 and 3 compatibility library (Python 3 interface)
+ Six is a Python 2 and 3 compatibility library. It provides utility
+ functions for smoothing over the differences between the Python versions
+ with the goal of writing Python code that is compatible on both Python
+ versions.
+ .
+ This package provides Six on the Python 3 module path. It is complemented
+ by python-six and pypy-six.
+
+Package: pypy-six
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${pypy:Depends},
+Description: Python 2 and 3 compatibility library (PyPy interface)
+ Six is a Python 2 and 3 compatibility library. It provides utility
+ functions for smoothing over the differences between the Python versions
+ with the goal of writing Python code that is compatible on both Python
+ versions.
+ .
+ This package provides Six on the PyPy module path. It is complemented
+ by python-six and python3-six.
+
+Package: python-six-whl
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${python3:Depends},
+Description: Python 2 and 3 compatibility library (universal wheel)
+ Six is a Python 2 and 3 compatibility library. It provides utility
+ functions for smoothing over the differences between the Python versions
+ with the goal of writing Python code that is compatible on both Python
+ versions.
+ .
+ This package provides Six as a universal wheel.
