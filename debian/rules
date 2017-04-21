@@ -11,7 +11,7 @@ export PYBUILD_DISABLE_pypy := test
 
 
 %:
-	dh $@ --with python2,python3,pypy --buildsystem=pybuild
+	dh $@ --with python2,python3 --buildsystem=pybuild
 
 
 override_dh_auto_install:

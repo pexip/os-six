@@ -1,6 +1,6 @@
 six (1.10.0-2pexip2) pexip; urgency=low
 
-  * Reinstate pypy/python3 build
+  * Reinstate python3 build
 
  -- John-Mark Bell <jmb@pexip.com>  Tue, 18 Apr 2017 09:15:37 +0100
 
