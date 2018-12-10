@@ -1,3 +1,42 @@
+six (1.12.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/watch: Use https protocol
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Colin Watson ]
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Dec 2018 10:47:02 +0000
+
+six (1.11.0-2) unstable; urgency=medium
+
+  * Move VCS to salsa.debian.org.
+  * Switch Maintainer to the Debian Python Modules Team.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 10 Feb 2018 02:30:00 +0000
+
+six (1.11.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Build-depend only on python3-sphinx rather than accepting python-sphinx
+    as an alternative.
+  * Use HTTPS form of copyright-format URL.
+  * Support DEB_BUILD_OPTIONS=nodoc.
+  * Policy version 4.1.0.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 22 Sep 2017 11:29:33 +0100
+
+six (1.10.0-4) unstable; urgency=medium
+
+  * Build Sphinx documentation in a new python-six-doc binary package
+    (closes: #855492).
+  * Policy version 3.9.8: no changes required.
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 19 Feb 2017 16:30:19 +0000
+
 six (1.10.0-3) unstable; urgency=medium
 
   * d/control:
