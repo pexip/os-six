@@ -2,8 +2,8 @@ Source: six
 Section: python
 Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
-XSBC-Pexip-Original-Maintainer: Colin Watson <cjwatson@debian.org>
-XSBC-Pexip-Original-Uploaders: Barry Warsaw <barry@debian.org>,
+XSBC-Pexip-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+XSBC-Pexip-Original-Uploaders: Colin Watson <cjwatson@debian.org>, Barry Warsaw <barry@debian.org>,
 Build-Depends: debhelper (>= 9),
                dh-python,
                pypy,
@@ -18,12 +18,11 @@ Build-Depends: debhelper (>= 9),
                python3-py,
                python3-pytest,
                python3-setuptools,
-Standards-Version: 3.9.6
-X-Python-Version: >= 2.7
-X-Python3-Version: >= 3.4
-Vcs-Git: https://anonscm.debian.org/git/collab-maint/six.git
-Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/six.git
-Homepage: https://pythonhosted.org/six/
+               python3-sphinx,
+Standards-Version: 4.1.0
+Vcs-Git: https://salsa.debian.org/python-team/modules/six.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/six
+Homepage: https://pypi.python.org/pypi/six
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
 
 Package: python-six
@@ -67,3 +66,18 @@ Description: Python 2 and 3 compatibility library (PyPy interface)
  .
  This package provides Six on the PyPy module path. It is complemented
  by python-six and python3-six.
+
+Package: python-six-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends},
+Built-Using: ${sphinxdoc:Built-Using}
+Description: Python 2 and 3 compatibility library (documentation)
+ Six is a Python 2 and 3 compatibility library. It provides utility
+ functions for smoothing over the differences between the Python versions
+ with the goal of writing Python code that is compatible on both Python
+ versions.
+ .
+ This package provides the documentation for Six.
