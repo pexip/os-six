@@ -23,7 +23,7 @@ Standards-Version: 4.1.0
 Vcs-Git: https://salsa.debian.org/python-team/modules/six.git
 Vcs-Browser: https://salsa.debian.org/python-team/modules/six
 Homepage: https://pypi.python.org/pypi/six
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: python-six
 Architecture: all
