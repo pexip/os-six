@@ -2,27 +2,25 @@ Source: six
 Section: python
 Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
-XSBC-Pexip-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-XSBC-Pexip-Original-Uploaders: Colin Watson <cjwatson@debian.org>, Barry Warsaw <barry@debian.org>,
-Build-Depends: debhelper (>= 9),
+XSBC-Pexip-Original-Maintainer: Debian Python Team <team+python@tracker.debian.org>
+XSBC-Pexip-Original-Uploaders: Colin Watson <cjwatson@debian.org>
+Build-Depends: debhelper-compat (= 12),
                dh-python,
                pypy,
                pypy-setuptools,
-               python (>= 2.6.6-3~),
+               python2 (>= 2.6.6-3~),
                python-all,
-               python-py,
-               python-pytest,
                python-setuptools,
                python3 (>= 3.1.2-8~),
                python3-all,
-               python3-py,
                python3-pytest,
                python3-setuptools,
                python3-sphinx,
-Standards-Version: 4.1.0
-Vcs-Git: https://salsa.debian.org/python-team/modules/six.git
-Vcs-Browser: https://salsa.debian.org/python-team/modules/six
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/python-team/packages/six.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/six
 Homepage: https://pypi.python.org/pypi/six
+Testsuite: autopkgtest-pkg-python
 XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: python-six
@@ -30,6 +28,11 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},
          ${python:Depends},
+Breaks: python (<< 2.7.18),
+        python-minimal (<< 2.7.18),
+        libpython-stdlib (<< 2.7.18),
+        python-iso8601 (<< 0.1.12-2~),
+        python-pbr (<< 5.4.5),
 Description: Python 2 and 3 compatibility library (Python 2 interface)
  Six is a Python 2 and 3 compatibility library. It provides utility
  functions for smoothing over the differences between the Python versions
@@ -44,6 +47,9 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},
          ${python3:Depends},
+Breaks: python (<< 2.7.18),
+        python-minimal (<< 2.7.18),
+        libpython-stdlib (<< 2.7.18),
 Description: Python 2 and 3 compatibility library (Python 3 interface)
  Six is a Python 2 and 3 compatibility library. It provides utility
  functions for smoothing over the differences between the Python versions
