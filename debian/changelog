@@ -1,3 +1,26 @@
+six (1.16.0-4) unstable; urgency=medium
+
+  [ Stefano Rivera ]
+  * Remove Breaks introduced to smooth upgrades to Debian bullseye, in
+    1.16.0-2. No longer needed.
+
+  [ Thomas Goirand ]
+  * Team upload.
+  * Remove Python 2 and PyPy support (Closes: #938492).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 28 Jul 2022 11:48:20 +0200
+
+six (1.16.0-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
+
+  [ Colin Watson ]
+  * Link directly to upstream in Homepage and debian/copyright.
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 26 Dec 2021 02:24:26 +0000
+
 six (1.16.0-2) unstable; urgency=medium
 
   * Team upload.
