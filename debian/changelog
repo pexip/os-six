@@ -1,3 +1,9 @@
+six (1.16.0-4pexip1) pexip-bookworm; urgency=medium
+
+  * Initial bookworm build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 16 Nov 2023 10:33:38 +0000
+
 six (1.16.0-4) unstable; urgency=medium
 
   [ Stefano Rivera ]
