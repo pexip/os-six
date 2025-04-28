@@ -2,21 +2,18 @@
 
 export PYBUILD_NAME := six
 export PYBUILD_TEST_PYTEST := 1
-export PYBUILD_BEFORE_TEST := cp -a test_six.py {build_dir}/
-export PYBUILD_AFTER_TEST := \
-	rm -rf {build_dir}/test_six.py \
-	       {build_dir}/*.pyc {build_dir}/__pycache__
-
 
 %:
-	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+	dh $@ --buildsystem=pybuild
 
-override_dh_auto_build:
-	dh_auto_build
 ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+execute_after_dh_auto_build:
 	$(MAKE) -C documentation html
 endif
 
-override_dh_auto_clean:
-	dh_auto_clean
+execute_after_dh_auto_clean:
 	$(MAKE) -C documentation clean
+
+override_dh_installdocs:
+	dh_installdocs -Npython-six-doc
+	dh_installdocs -ppython-six-doc --doc-main-package=python3-six
